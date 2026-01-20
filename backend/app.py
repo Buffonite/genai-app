@@ -2,8 +2,11 @@ from flask import Flask, request, jsonify, render_template
 from model import llama_response, granite_response, mistral_response
 import time
 
-app = Flask(__name__)
-
+app = Flask(
+    __name__,
+    template_folder="frontend",  # 这里告诉 Flask 去 frontend 找 HTML
+    static_folder="frontend"     # 如果你有 CSS/JS 文件也在 frontend
+)
 @app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
