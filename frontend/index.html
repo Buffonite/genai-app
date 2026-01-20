@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="English">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Assistant Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>AI Customer Service Assistant</h1>
+
+  <label for="model">Select Model:</label>
+  <select id="model">
+    <option value="llama">LLaMA</option>
+    <option value="granite">Granite</option>
+    <option value="mistral">Mistral</option>
+  </select>
+
+  <br /><br />
+
+  <label for="message">Enter your question:</label><br />
+  <textarea id="message" rows="5" cols="60" placeholder="Enter customer question..."></textarea>
+
+  <br /><br />
+  <button onclick="sendMessage()">Send</button>
+
+  <h2>AI Response:</h2>
+  <div id="response" style="white-space: pre-wrap; border: 1px solid #ccc; padding: 10px;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
